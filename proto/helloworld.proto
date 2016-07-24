@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+
+package hello;
+
+// Interface exported by the server.
+service Greeter {
+    rpc SayHello(User) returns (Greeting) {}
+}
+
+message User {
+  string first_name = 1;
+  string last_name = 2;
+}
+
+message Greeting {
+    string text = 1;
+}
